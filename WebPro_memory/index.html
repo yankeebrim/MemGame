@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daemon Life Memory</title>
+
+  <!-- fonts (see README) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- logo + title -->
+  <header>
+    <canvas id="logo" width="120" height="120"></canvas>
+    <h1>Daemon Life</h1>
+  </header>
+
+  <!-- stats: moves, time, pairs -->
+  <section id="stats">
+    <span>Moves: <span id="moves">0</span></span>
+    <span>Time: <span id="time">0:00</span></span>
+    <span>Pairs: <span id="pairs">0</span></span>
+  </section>
+
+  <!-- new game -->
+  <button id="new-game">New Game</button>
+
+  <!-- cards -->
+  <main id="board"></main>
+
+  <!-- win / errors -->
+  <p id="status"></p>
+
+  <!-- start -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

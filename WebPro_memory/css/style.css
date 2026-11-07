@@ -1,0 +1,102 @@
+/* Daemon Life memory game */
+
+/* colors + font */
+:root {
+  --bg: #050708;
+  --cyan: #5EF2F0;
+  --text: #cfeeee;
+  --font: "VT323", "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+/* page */
+body {
+  margin: 0;
+  padding: 24px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 20px;
+  text-align: center;
+}
+
+/* header */
+header {
+  margin-bottom: 16px;
+}
+
+/* title */
+h1 {
+  color: var(--cyan);
+  font-size: 56px;
+  margin: 8px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px var(--cyan);
+}
+
+/* stats row */
+#stats {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+/* button */
+#new-game {
+  font-family: var(--font);
+  font-size: 22px;
+  color: var(--bg);
+  background: var(--cyan);
+  border: none;
+  padding: 6px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#new-game:hover {
+  box-shadow: 0 0 12px var(--cyan);
+}
+
+/* board */
+#board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* card */
+.card {
+  aspect-ratio: 1;
+  background: #0a1a1f;
+  border: 2px solid var(--cyan);
+  color: transparent;
+  font-family: var(--font);
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* flipped */
+.card.flipped {
+  background: #0f2a33;
+  color: var(--cyan);
+}
+
+/* matched */
+.card.matched {
+  color: #3dff9a;
+  border-color: #3dff9a;
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* status */
+#status {
+  margin-top: 16px;
+  font-size: 24px;
+  color: var(--cyan);
+}
